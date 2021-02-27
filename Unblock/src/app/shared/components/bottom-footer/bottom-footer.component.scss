@@ -1,0 +1,217 @@
+@import "../../../app.component.scss";
+
+.main-container{
+
+  width: 100%;
+  background-color: black;
+
+  //font config
+  font-family: Enceladus-Demibold;
+  color: #ffffff;
+  text-align: left;
+  .top-container{
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 40px;
+    .leftmost-container{
+      width: 100%;
+
+      .title-container{
+        width: 100%;
+        color: rgba(208, 252, 159, 0.822);
+        font-size: 24px;
+        letter-spacing: 2px;
+        line-height: 1.41;
+
+      }
+    }
+
+    .details-container{
+      width: 100%;
+      .details{
+        width: 100%;
+        line-height: 31.5px;
+        letter-spacing: 1.4px;
+      }
+      a{
+        text-decoration: none;
+        color: white;
+        text-align: start;
+      }
+      a:hover{
+        color: $darkRed;
+        @include gradient-red-bg();
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: Enceladus-Demibold;
+      }
+    }
+    .middle{
+      width: 100%;
+
+      .title-container{
+        width: 100%;
+        color: rgba(208, 252, 159, 0.822);
+        font-size: 24px;
+        letter-spacing: 2px;
+        line-height: 1.41;
+      }
+      .logo-container{
+        width: 100%;
+        height: 30px;
+
+        img{
+          width: 100%;
+          height: inherit;
+          width: 30px;
+          margin-right: 20px;
+        }
+      }
+    }
+
+    .rightmost-container{
+      width: 100%;
+      .title-container{
+        width: 100%;
+        color: rgba(208, 252, 159, 0.822);
+        font-size: 24px;
+        letter-spacing: 2px;
+        line-height: 1.41;
+      }
+      .button-container{
+        width: 100%;
+        font-family: Enceladus-Demibold;
+
+        .button {
+          @include gradient-gold-bg();
+          border: none;
+          font-size: 14.5px;
+          cursor: pointer;
+          text-align: center;
+          letter-spacing: 1.45px;
+          width: 30%;
+          max-width: 150px;
+
+          font-family: Enceladus-Demibold;
+
+          padding-top: 10px;
+          padding-bottom: 10px;
+          border: none;
+          outline:none;
+          button{
+            border: none;
+            outline:none;
+          }
+        }
+        button:hover{
+          border: 3px solid $darkGold;
+          color: $darkGold;
+          @include gradient-gold-bg();
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-weight: 500;
+          padding-top: 7px;
+          padding-bottom: 7px;
+        }
+      }
+    }
+  }
+  .grey-line{
+    width: 100%;
+    height: 1px;
+    background-color: #dadada;
+    opacity: 0.5;
+  }
+  .bottom-container{
+    color: #b7b7b7;
+    font-size:12.5px;
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    .bottom-leftmost{
+      width: 100%;
+      align-self: center;
+      .bottom-link{
+        color: #b7b7b7;
+        text-decoration: none;
+      }
+      .bottom-link:hover{
+        color: transparent;
+        @include gradient-gold-bg();
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    .bottom-rightmost{
+      width: 100%;
+      color: #b7b7b7;
+      text-align: end;
+    }
+  }
+  @media screen and (min-width: 992px){
+    //all consistent font
+    // .top-container .leftmost-container .title-container,
+    .middle .title-container,
+    .rightmost-container .title-container{
+      font-size: 18px;
+    }
+    .top-container .leftmost-container .details-container{
+      font-size: 14px;;
+    }
+    //all consistent padding
+    .top-container .leftmost-container .title-container,
+    .middle .title-container,
+    .rightmost-container .title-container{
+      padding-top: 40px;
+      padding-bottom: 30px;
+    }
+  }
+  @media screen and (max-width: 991px){
+    //all consistent padding
+    .top-container .leftmost-container .title-container,
+    .middle .title-container,
+    .rightmost-container .title-container{
+      padding-top: 30px;
+      padding-bottom: 20px;
+      font-size: 16px;
+
+    }
+    .bottom-container{
+      font-size: 11px;
+    }
+  }
+  @media screen and (max-width: 450px){
+     //all consistent font
+     .top-container .leftmost-container .title-container,
+     .middle .title-container,
+     .rightmost-container .title-container{
+       font-size: 14px;
+     }
+     .top-container .leftmost-container .details-container,
+     .rightmost-container.button-container{
+       font-size: 12px;;
+     }
+     //all consistent padding
+    .top-container .leftmost-container .title-container,
+    .middle .title-container,
+    .rightmost-container .title-container{
+      padding-top: 25px;
+      padding-bottom: 20px;
+    }
+    .bottom-container{
+      font-size: 10px;
+    }
+  }
+
+}

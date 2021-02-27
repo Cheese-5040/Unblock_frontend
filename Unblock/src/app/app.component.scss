@@ -1,0 +1,83 @@
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+
+
+// create variables and mixins for other components to use
+$darkGold: rgb(168, 142, 28);
+$lightGold: rgb(233, 170, 170);
+$darkRed: rgba(168, 28, 28, 0.822);
+$lightRed: rgb(233, 170, 170);
+
+$standardLineHeight: 30px;
+
+@mixin gradient-gold-bg {
+  background: linear-gradient(to right, #a38a45, #d2b156,#f4e48c);
+}
+
+
+@mixin gradient-red-bg {
+  background: linear-gradient(to right, #e65151, #e28686,#ffc0c0);
+}
+@mixin gradient-gold-border {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  @include gradient-gold-bg();
+}
+@mixin gradient-red-border {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  @include gradient-red-bg();
+}
+@mixin container-x-padding {
+  padding-left: 5%;
+  padding-right: 5%;
+  @media (max-width: 1000px) {
+    padding-right: 10vw;
+    padding-left: 10vw;
+  }
+}
+
+@mixin play {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  z-index: inherit;
+  z-index: 2;
+  filter: brightness(70%);
+}
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  background-color: transparent;
+  app-navigation-bar{
+    width: 100%;
+    height: 106px;
+    justify-content: center;
+    display: flex;
+  }
+  app-bottom-footer{
+    width: 100%;
+  }
+  @media screen and (max-width: 991px){
+    app-navigation-bar{
+      height: 60px;
+    }
+  }
+}

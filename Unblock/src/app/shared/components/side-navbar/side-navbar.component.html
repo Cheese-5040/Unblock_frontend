@@ -1,0 +1,63 @@
+
+<ng-container *ngIf="isMobile">
+  <div [style]="
+      show ? 'transform: translateX(0%)' : 'transform: translateX(150%)'
+    " class="side-navbar-container">
+    <div *ngIf="showSideNavbar" class="content">
+      <a class="cross" (click)="hideSideNavbar()">
+        <img src="../../../../assets/image/side-navbar/cross_button.png" />
+      </a>
+      <div class="yellow-bar"></div>
+
+      <div class="top-container">
+        <div class="title-container">
+          <a href="/#/home-page" (click)="hideSideNavbar()">
+            <img class="scm_logo" src="../../../../assets/image/navigation-bar/-e-logo.jpg" alt="SoChunMan" />
+          </a>
+        </div>
+        <div fxLayout="column" fxLayoutAlign="start start" class="menu-list w100">
+          <ng-container *ngFor="let title of Titles">
+              <div class="menu-big-item">
+                <ng-container *ngIf="title.position != 6">
+                  <a class="menu-item" (click)="hideSideNavbar()" href="{{title.link}}">
+                    {{title.name}}
+                  </a>
+                </ng-container>
+                <ng-container *ngIf="title.position == 6">
+                  <a class="menu-item" style="border-bottom: none;" (click)="hideSideNavbar()" href="{{title.link}}">
+                    {{title.name}}
+                  </a>
+                </ng-container>
+
+              </div>
+          </ng-container>
+          <img class= "registration-logo" src="../../../../assets/image/navigation-bar/-e-account.png">
+
+          <a class="language"  href="/#/a;slkfj;skldajf" fxLayout = "row">
+            <ng-container *ngIf ="isTraditional">
+              <pre class ="gold-register">繁     |     </pre>
+              <a  (click) = "switchLang()"  class="switch" >简</a>
+            </ng-container>
+            <ng-container *ngIf ="!isTraditional">
+              <a  (click) = "switchLang()" class="switch" >繁</a>
+
+              <pre class ="gold-register">     |     简</pre>
+            </ng-container>
+
+          </a>
+        </div>
+        <div class="social-media" fxLayout="row" fxLayoutAlign="space-between center">
+          <a href="#"><img src="../../../../assets/image/bottom-footer/icon-instagram-white.svg"/></a>
+          <a href="#"><img src="../../../../assets/image/bottom-footer/-e-wechat.png"/></a>
+          <a href="https://www.facebook.com/King-Prestige-Club-%E4%BA%AC%E7%B2%B5%E6%9C%83-2055303574575075/"><img src="../../../../assets/image/bottom-footer/icon-facebook-white.svg" /></a>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</ng-container>
+<!-- fix this later in desktop mode it disappear but other mode it reappear -->
+<ng-container *ngIf="!isMobile">
+  <!-- hideSideNavbar() -->
+</ng-container>

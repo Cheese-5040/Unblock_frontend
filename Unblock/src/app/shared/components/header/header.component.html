@@ -1,0 +1,47 @@
+<header>
+  <video #video autoplay loop>
+    <source src="/assets/image/home-page/travel.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <script>
+    document.getElementById('vid').play();
+  </script>
+  <div id="header-content">
+    <ng-container *ngIf="!isMobile">
+      <div class="form-container" fxLayout="row" fxLayoutAlign="space-between center"> 
+        <mat-form-field class="input" appearance="fill" >
+          <mat-label for="startPosition">Starting location Latitude: </mat-label>
+            <input #todo1 matInput type="text" name="todo1" placeholder="Initial Location Latitude">
+        </mat-form-field>
+        <div style="width: 50px"> </div>
+        <mat-form-field class="input" appearance="fill">
+          <mat-label>Starting location Longtitude: </mat-label>
+            <input #todo2 matInput type="text" name="todo2" placeholder="Initial Location Longtitude">
+        </mat-form-field>
+      </div>
+      <div class="form-container" fxLayout="row" fxLayoutAlign="space-between center"> 
+        <mat-form-field class="input" appearance="fill" >
+          <mat-label for="startPosition">End Location Latitude : </mat-label>
+            <input #todo3 matInput type="text" name="todo3" placeholder="Final Location Latitude">
+        </mat-form-field>
+        <div style="width: 50px"> </div>
+        <mat-form-field class="input" appearance="fill">
+          <mat-label>End location Longtitude: </mat-label>
+            <input #todo4 matInput type="text" name="todo4" placeholder="Final Location Longtitude">
+        </mat-form-field>
+      </div>
+      <button mat-raised-button color="primary" type="button" (click)="addTodo(todo1.value, todo2.value, todo3.value, todo4.value)">Search
+      </button> 
+    </ng-container>
+    <ng-container *ngIf="isMobile">
+      <h1 id="header-content-title">
+        <div class="main">From: </div>
+        To: </h1>
+    </ng-container>
+       
+    <p id="header-content-paragraph">
+
+    </p>
+  </div>
+  
+</header>

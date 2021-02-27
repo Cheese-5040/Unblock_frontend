@@ -1,0 +1,192 @@
+<div class="bottom-footer-main-container">
+
+  <!-- main container -->
+  <div class="main-container" fxLayout="column" fxLayoutAlign="start start">
+    <!-- desktop mode -->
+    <ng-container *ngIf ="!isMobile">
+      <!-- top part -->
+      <div
+        class="top-container"
+        fxLayout="row"
+        fxLayoutAlign="space-between start"
+      >
+        <!-- leftmost-container -->
+        <div
+          class="leftmost-container"
+          fxLayout="column"
+          fxLayoutAlign="center center"
+          fxFlex="100"
+        >
+          <!-- title container -->
+          <div class="title-container">Contact info</div>
+
+          <!-- details container -->
+          <div class="details-container">
+            <div fxLayout="row" fxLayoutAlign="start start" >
+              <div class="details"style="width: 100px;">Github :</div><a class="details"href="https://github.com/PremanJeyabalan/aws_hackathon"> repository</a>
+
+            </div>
+
+            
+            <div fxLayout="row" fxLayoutAlign="start start" >
+              <div class="details" style="width: 100px;">Email-us: </div><a class="details" href ="mailto: csowyong@connect.ust.hk">csowyong@connect.ust.hk</a>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- rightmost-container -->
+        <div
+          class="rightmost-container"
+          fxLayout="column"
+          fxLayoutAlign="start start"
+        >
+          <div class="title-container">Donate</div>
+
+          <div
+            class="button-container"
+            fxLayout="row"
+            fxLayoutAlign="space-between start"
+          >
+            <button class="button" href="/#/">Gofundme</button>
+          </div>
+        </div>
+
+        
+        
+      </div>
+    </ng-container>
+
+    <!-- mobile mode -->
+    <ng-container *ngIf ="isMobile">
+      <!-- top part -->
+      <div
+        class="top-container"
+        fxLayout="column"
+        fxLayoutAlign="start start"
+      >
+        <!-- leftmost-container -->
+        <div
+          class="leftmost-container"
+          fxLayout="column"
+          fxLayoutAlign="start start"
+        >
+          <!-- title container -->
+          <div class="title-container">聯絡我們</div>
+
+          <!-- details container -->
+          <div class="details-container">
+            <div class="details">香港總部：香港灣仔告士打道88號22樓</div>
+
+            <div class="details">
+              廣州聯絡處： 廣東省廣州市天河區天源路1190號華南植物園蒲崗路
+            </div>
+
+            <div class="details">聯絡電話：+852 2119 5619</div>
+
+            <div fxLayout="row" fxLayoutAlign="start start" >
+              <div class="details" style="width: 60px;">電郵：</div><a class="details" href ="mailto: info@kingpclub.com">info@kingpclub.com</a>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- middle -->
+        <div
+          class="middle"
+          fxLayout="column"
+          fxLayoutAlign="start start"
+        >
+          <!-- title part -->
+          <div class="title-container">緊貼我們的動態</div>
+
+          <!-- logo part -->
+          <div class="logo-container" fxLayout="row" fxLayoutAlign="start start">
+            <a>
+              <img
+              src="../../../../assets/image/bottom-footer/icon-instagram-white.svg"
+            />
+            </a>
+            <a>
+              <img
+              src="../../../../assets/image/bottom-footer/-e-wechat.png"
+            />
+            </a>
+            <a>
+              <img
+              src="../../../../assets/image/bottom-footer/icon-facebook-white.svg"
+            />
+            </a>
+
+          </div>
+        </div>
+
+        <!-- rightmost-container -->
+        <div
+          class="rightmost-container"
+          fxLayout="column"
+          fxLayoutAlign="start start"
+        >
+          <div class="title-container">快速鏈接</div>
+
+          <div
+            class="button-container"
+            fxLayout="row"
+            fxLayoutAlign="space-between start"
+          >
+            <button class="button" href="/#/">成為會員</button>
+            <button class="button" href="/#/">會員服務</button>
+            <button class="button" href="/#/">活動</button>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
+    <!-- weird grey line -->
+    <div class="grey-line"></div>
+    <ng-container *ngIf="!isMobile">
+      <!-- bottom part -->
+      <div
+        class="bottom-container"
+        fxLayout="row"
+        fxLayoutAlign="space-between start"
+      >
+        <div class="bottom-leftmost" fxLayout="row"
+        fxLayoutAlign="space-between start"fxFlex="30">
+          <a class="bottom-link" href="">隱私條款</a>
+          <a class="bottom-link" href="">免責聲明 </a>
+          <a class="bottom-link" href="">資料傳送通知</a>
+        </div>
+        <div class="bottom-rightmost" fxFlex="50">
+          COPYRIGHT © 2020 KING PRESTIGE 版權所有 不得轉載
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="isMobile">
+      <!-- bottom part -->
+      <div
+      class="bottom-container"
+      fxLayout="column"
+      fxLayoutAlign="space-between start"
+      >
+        <div class="bottom-leftmost" fxLayout="row"
+        fxLayoutAlign="space-between start">
+          <a class="bottom-link" href="">FAST</a>
+          <a class="bottom-link" href="">RELIABLE </a>
+          <a class="bottom-link" href="">RESILIENT</a>
+        </div>
+        <div class="bottom-rightmost" style="text-align: center;">
+          COPYRIGHT © 2021 UNBLOCK 版權所有 不得轉載
+        </div>
+      </div>
+
+    </ng-container>
+
+
+
+
+  </div>
+</div>

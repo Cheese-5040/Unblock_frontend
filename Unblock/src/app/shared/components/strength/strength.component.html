@@ -1,0 +1,9 @@
+<article
+  class="strength"
+  [style.backgroundImage]="'url(' + strength.bgUrl + ')'"
+>
+  <h1>{{ strength.title }}</h1>
+  <ul>
+    <li *ngFor="let c of strength.content">{{ c }}</li>
+  </ul>
+</article>

@@ -1,0 +1,148 @@
+@import "../../../app.component.scss";
+.navigation-bar-container{
+  width: 100%;
+  height: fit-content;
+  position: fixed;
+  align-self: center;
+  z-index : 10000;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: hidden;
+  background-color: #000000;
+  font-family: Enceladus-Demibold;
+
+  .main-container{
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+
+    // @media screen and (min-width: 1441px){
+    //   width: 1440px;
+    //   padding-left: 72px;
+    //   padding-right: 72px;
+    // }
+
+    .logo-left{
+      width: 10%;
+      height: 106px;
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      .company-logo{
+        width: 106px;
+        height: 106px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+     
+
+
+    }
+    .main-title{
+      font-family: Enceladus-Bold;
+      color: rgba(208, 252, 159, 0.822);
+      font-size: 30px;
+    }
+
+    .logo-right{
+      height: initial;
+      width: 100%;
+      display: flex;
+      align-self: center;
+
+
+      .logo-right-container{
+        width: 100%;
+        white-space: nowrap;
+        align-self: center;
+        justify-content: center;
+        text-align: right;
+        .logo-text{
+          color: rgba(208, 252, 159, 0.822);
+          text-decoration: none;
+          padding-left: 5%;
+          font-size: 24px;
+          text-align: right;
+          letter-spacing: 1px;
+        }
+        .logo-text:hover{
+          color: rgba(168, 28, 28, 0.822);
+
+        }
+
+      }
+
+
+      .logo-rightmost-container{
+        width: fit-content;
+        white-space: nowrap;
+        align-self: center;
+        .gold-side-bar{
+          height: 30px;
+          width: auto;
+          border-right: 2px solid #a38a45;
+          align-self: center;
+          margin-left: 60px;
+          margin-right: 45px;
+        }
+        .registration-logo{
+          align-self: center;
+          justify-content: center;
+          display: flex;
+          height: 23px;
+          width: 23px;
+          background-color: black;
+          margin-right: 30px;
+
+        }
+        .gold-register{
+          font-family: PingFangSC-Regular;
+
+          text-align: center;
+          justify-content: center;
+          padding-left: 5%;
+          color: #a38a45;
+          font-size: 17px;
+        }
+
+      }
+    }
+    @media screen and (max-width:991px){
+      .logo-left{
+        height: 60px;
+        .company-logo{
+          width: 60px;
+          height: 60px;
+        }
+      }
+      .logo-right{
+        .hamburger{
+          width: 30px;
+          img{
+            width:30px;
+          }
+        }
+      }
+    }
+
+
+  }
+
+}
+.gold-bottom-bar{
+  position: fixed;
+  width: 100%;
+  height: 7px;
+  margin-top: 106px;
+  @include gradient-red-bg();
+  z-index: 10000;
+  @media screen and (max-width:991px){
+    margin-top: 60px;
+  }
+}

@@ -1,0 +1,47 @@
+<div class="navigation-bar-container" fxLayout =" column " fxLayoutAlign="start start">
+  <ng-container *ngIf ="!isMobile">
+    <!-- desktop view + tablet view -->
+    <div class="main-container" fxLayout ="row" fxLayoutAlign="space-between center">
+      <!-- left part of the header -->
+      <a class="logo-left" fxFlex="10" href="/#/home-page">
+        <img class="company-logo"  src="../../../../assets/image/navigation-bar/-e-logo.png">
+      </a>
+      <div class="main-title"> 
+          Unblock
+      </div>
+
+      <!-- right part of the header -->
+      <div class="logo-right">
+        <!-- left part -->
+        <div class="logo-right-container" ngSwitch={{componentName}} >
+
+          <ng-container *ngSwitchDefault  >
+            <a class="logo-text" (click)="refresh()" href="/#/home-page">Home</a>
+            <a class="logo-text" (click)="refresh()"href="/#/our-services">Path Search</a>
+            <a class="logo-text" (click)="refresh()" href="/#/contact-us">Contact Us</a>
+
+          </ng-container>
+
+        </div>
+        
+      </div>
+    </div>
+  </ng-container>
+  <ng-container *ngIf ="isMobile">
+    <!-- desktop view + tablet view -->
+    <div class="main-container" fxLayout ="row" fxLayoutAlign="space-between center">
+      <!-- left part of the header -->
+      <div class="logo-left" fxFlex="10">
+        <img class="company-logo"  src="../../../../assets/image/navigation-bar/-e-logo.jpg">
+      </div>
+
+      <!-- right part of the header -->
+      <div class="logo-right" fxFlex="10">
+        <a style="z-index: 5000; " (click)="showSideNavbar()"><img class="hamburger"
+          src="../../../../assets/image/navigation-bar/lnr-menu.svg" /></a>
+      </div>
+    </div>
+  </ng-container>
+
+</div>
+<div class ="gold-bottom-bar"></div>
